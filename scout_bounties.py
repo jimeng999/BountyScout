@@ -249,7 +249,7 @@ def main():
 
     notif_lines = [
         f"🎯 *New Bounty Alert* ({now_str})",
-        f"Found {len(new_bounties)} fresh fiat bounty{'ies' if len(new_bounties) > 1 else ''}:\n",
+        f"Found {len(new_bounties)} fresh fiat {'bounties' if len(new_bounties) > 1 else 'bounty'}:\n",
     ]
     for idx, b in enumerate(new_bounties, start=1):
         notif_lines.append(f"{idx}. *{b['title']}* — {b['amount']}")
@@ -264,7 +264,7 @@ def main():
         send_discord_notification(discord_webhook, notification_msg.replace("•", "-"))
 
     if github_token and repo_fullname:
-        issue_title = f"🎯 Bounty Alert: {len(new_bounties)} fresh fiat bounty{'ies' if len(new_bounties) > 1 else ''}"
+        issue_title = f"🎯 Bounty Alert: {len(new_bounties)} fresh fiat {'bounties' if len(new_bounties) > 1 else 'bounty'}"
         issue_body = f"### Fresh fiat-paying bounties (≤{MAX_AGE_DAYS}d old, ≤{MAX_COMMENTS} comments, unassigned)\n\n**Scan:** {now_str}\n\n"
         for idx, b in enumerate(new_bounties, start=1):
             issue_body += (
