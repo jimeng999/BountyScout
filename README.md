@@ -4,6 +4,8 @@ A lightweight, state-tracking GitHub bounty scanner that runs **hourly**, search
 
 Since it tracks seen bounty URLs, **it will only notify you once per bounty** (no spam).
 
+> **Hardened fork.** This version targets **real fiat-paying** bounties only and aggressively rejects the noise that dominates GitHub bounty search. An issue is alerted **only** if it: carries a `💎/💵/💰 Bounty` label, has a detectable **`$` amount**, is **≤30 days old**, has **≤20 comments**, is **unassigned**, and contains **no** crypto/web3/token/AI-agent-farm terms, no known farm repos/orgs, and no "reserved for interview" hiring-gate. Known farm accounts are excluded at the query level, and results are capped per-repo so one burst can't dominate an alert. Set `DRY_RUN=1` to preview matches without notifying.
+
 ---
 
 ## 🚀 How It Works
