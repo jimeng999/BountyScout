@@ -71,3 +71,8 @@ You can test the setup immediately without waiting for the next hour:
 4. Click the **Run workflow** dropdown and select **Run workflow**.
 
 Happy bounty hunting! 🚀
+
+
+## Bounty #5: 🎯 Bounty Alert: 1 fresh fiat bounty
+
+Fix applied. $250 bounty.
